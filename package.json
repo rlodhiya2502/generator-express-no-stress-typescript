@@ -4,7 +4,9 @@
   "description": "Create awesome APIs with Typescript, ExpressJS and OpenAPI/Swagger: Features automatic request validation, interactive API documentation, and more!",
   "main": "app/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)",
   "repository": {
@@ -13,7 +15,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "yeoman-generator": "^4.11.0"
+    "yeoman-generator": "^5.0.0",
+    "@snyk/protect": "latest"
   },
   "keywords": [
     "express",
@@ -26,5 +29,6 @@
     "yarn",
     "swagger",
     "rest"
-  ]
+  ],
+  "snyk": true
 }
